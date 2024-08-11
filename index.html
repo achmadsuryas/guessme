@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GUESS ME | Game Tebak-Tebakan</title>
+    <link rel="icon" href="assets/img/logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/assets/css/output.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body class="overflow-x-hidden">
+    <nav class="bg-secondary">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="/" class="flex items-center">
+                <img loading="lazy" src="assets/img/logo-gm.png" class="h-20 mr-3" alt="GuessMe" />
+            </a>
+            <button data-collapse-toggle="navbar-hamburger" type="button"
+                class="inline-flex items-center justify-center p-2 w-10 h-10 ml-3 text-sm text-primary rounded-lg"
+                aria-controls="navbar-hamburger" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="https://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+            <div class="hidden w-full" id="navbar-hamburger">
+                <ul class="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 p-5">
+                    <li>
+                        <a href="/"
+                            class="block py-2 pl-3 pr-4 text-secondary hover:bg-secondary hover:text-primary rounded">Home</a>
+                    </li>
+                    <li>
+                        <a href="/games"
+                            class="block py-2 pl-3 pr-4 text-secondary hover:bg-secondary hover:text-primary rounded">Games</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="pt-16 bg-secondary text-white">
+        <div class="container mx-auto px-4 flex flex-col-reverse items-center justify-between w-full mb-10 lg:flex-row">
+            <div class="mb-16 lg:mb-0 lg:max-w-lg lg:pr-5">
+                <div class="max-w-xl mb-6">
+                    <div>
+                        <p class="inline-block py-px mb-4 text-xs font-semibold uppercase text-tertiary">
+                            New Game
+                        </p>
+                    </div>
+                    <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight sm:text-4xl sm:leading-none">
+                        GUESS ME
+                    </h2>
+                    <p class="text-base text-justify">
+                        Main tebak angka dan tebak gambar seru dan menyenangkan sekaligus menguji imajinasi, logika &
+                        nalar. Ayo mainkan segera bersama teman dan keluarga mu!!!
+                    </p>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <a href="/games">
+                        <button
+                            class="items-center border border-primary text-primary hover:bg-primary hover:text-secondary font-bold px-10 rounded-sm py-1">EXPLORE
+                            NOW</button>
+                    </a>
+                </div>
+            </div>
+            <div class="flex items-center justify-center lg:w-1/2">
+                <div class="w-2/5">
+                    <img class="object-cover" loading="lazy" src="assets/img/mockup-ta.png" alt="" />
+                </div>
+                <div class="w-5/12 -ml-16 lg:-ml-32">
+                    <img class="object-cover" loading="lazy" src="assets/img/mockup-tg.png" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="container my-12 mx-auto">
+        <div class="grid gap-x-6 md:grid-cols-2 lg:grid-cols-4 lg:gap-x-12 px-4 text-center">
+            <div class="mb-12">
+                <div class="mb-6 inline-block rounded-full bg-secondary px-4 py-3 text-primary">
+                    <i class="fa-solid fa-headset fa-fw"></i>
+                </div>
+                <h5 class="mb-4 text-secondary text-lg font-bold">Support</h5>
+                <p class="text-secondary">
+                    Kami menghargai setiap masukan dan pertanyaan dari pengguna kami. Jika Anda memiliki saran atau
+                    pertanyaan, jangan ragu untuk menghubungi admin support kami melalui formulir kontak atau email.
+            </div>
+
+            <div class="mb-12">
+                <div class="mb-6 inline-block rounded-full bg-secondary px-4 py-3 text-primary">
+                    <i class="fa-solid fa-gamepad fa-fw"></i>
+                </div>
+                <h5 class="mb-4 text-secondary text-lg font-bold">Game</h5>
+                <p class="text-secondary">
+                    Website kami adalah destinasi utama bagi para pecinta game. Nikmati sensasi bermain game yang tak
+                    terlupakan.
+                </p>
+            </div>
+
+            <div class="mb-12">
+                <div class="mb-6 inline-block rounded-full bg-secondary px-4 py-3 text-primary">
+                    <i class="fa-solid fa-laptop"></i>
+                </div>
+                <h5 class="mb-4 text-secondary text-lg font-bold">Device</h5>
+                <p class="text-secondary">
+                    Kami mengerti bahwa pengguna datang dari berbagai perangkat. Karena itu, kami memastikan website
+                    kami selalu responsif untuk memberikan pengalaman terbaik.
+                </p>
+            </div>
+
+            <div class="mb-12">
+                <div class="mb-6 inline-block rounded-full bg-secondary px-4 py-3 text-primary">
+                    <i class="fa-solid fa-people-group"></i>
+                </div>
+                <h5 class="mb-4 text-secondary text-lg font-bold">Age</h5>
+                <p class="text-secondary">
+                    Website kami menawarkan game yang menghibur dan mendidik, sehingga setiap anggota keluarga dapat
+                    belajar sambil bersenang-senang.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-secondary text-primary">
+        <div class="container flex flex-col justify-center p-6 mx-auto lg:flex-row lg:justify-between">
+            <div class="flex items-center justify-center p-6 mt-8 h-72">
+                <img loading="lazy" src="assets/img/logo-gm.png" alt="" class="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
+            </div>
+            <div class="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
+                <h1 class="text-3xl font-bold">Why Choose Guess Me</h1>
+                <p class="mt-6 mb-8 text-lg sm:mb-12 text-justify">Guess Me ingin mengajak Anda untuk memilih kami karena
+                    kami bukan sekadar sebuah website permainan. Kami adalah komunitas yang menghubungkan orang-orang
+                    dari berbagai usia dan latar belakang, semua bersatu dalam kecintaan terhadap permainan
+                    tebak-tebakan.</p>
+                <div
+                    class="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
+                    <a rel="noopener noreferrer" href="/games"
+                        class="px-8 py-1 text-lg font-semibold hover:bg-primary hover:text-secondary border">EXPLORE NOW</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-primary">
+        <div class="mx-auto max-w-screen-xl px-4 pb-8 pt-16 sm:px-6 lg:px-8 lg:pt-24">
+            <div class="text-center">
+                <h2 class="text-3xl font-extrabold text-secondary sm:text-5xl">
+                    Any Question?
+                </h2>
+
+                <a href="mailto:guessme.cb@gmail.com"
+                    class="mt-8 inline-block rounded-full border border-secondary px-12 py-3 text-sm font-medium text-secondary hover:bg-secondary hover:text-primary focus:outline-none focus:ring">
+                    GET IN TOUCH
+                </a>
+            </div>
+            <div class="mt-16 border-t border-secondary pt-8 sm:flex sm:items-center sm:justify-between lg:mt-24">
+                <ul class="flex flex-wrap justify-center gap-4 text-xs lg:justify-end text-secondary">
+                    <li>
+                        <a href="/Terms&Conditions" class="transition hover:opacity-75">
+                            Terms & Conditions
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/PrivacyPolicy" class="transition hover:opacity-75">
+                            Privacy Policy
+                        </a>
+                    </li>
+                </ul>
+                <ul class="mt-8 flex justify-center gap-6 sm:mt-0 lg:justify-end">
+                    <li>
+                        <p class="text-xs text-secondary">Copyright © 2023 guessme. All Rights Reserved</p>
+                    </li>
+                </ul>
+
+                <ul class="mt-8 flex justify-center gap-6 sm:mt-0 lg:justify-end text-secondary">
+                    <li>
+                        <a href="/" rel="noreferrer" target="_blank" class="transition hover:opacity-75">
+                            <i class="fa-brands fa-instagram fa-xl"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://gitHub.com/guessme65" rel="noreferrer" target="_blank" class="transition hover:opacity-75">
+                            <span class="sr-only">GitHub</span>
+                            <i class="fa-brands fa-github fa-xl"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        window.onload = function() {
+            if (!localStorage.getItem('alertShown')) {
+                Swal.fire({
+                    title: '[UPDATE] <br>Patch Note 1.3 (24/10/2023)',
+                    html : 'Tebak Angka : <br> [Maksimal Angka Tebakan]<br>100 >> 50 ' + '<br><br>Tebak Gambar : <br> [Levels]<br>35 level >> 50 level ',
+                    showCancelButton: true,
+                    cancelButtonText: 'OK',
+                    confirmButtonText: 'Hapus ',
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        localStorage.setItem('alertShown', 'true');
+                    }
+                });
+            }
+        };
+    </script>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</body>
+
+</html>

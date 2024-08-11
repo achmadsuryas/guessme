@@ -1,0 +1,25 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --primary: #FFFFFF;
+  --secondary: #0591A0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.top {
+  position: fixed;
+  bottom: 50px;
+  margin-right: 20px;
+  right: 0;
+  background-color: var(--secondary);
+  color: var(--primary);
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 25px;
+  cursor: pointer;
+}

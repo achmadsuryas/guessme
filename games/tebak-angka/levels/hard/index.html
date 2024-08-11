@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GUESS ME | Tebak Angka</title>
+  <link rel="icon" href="/assets/img/logo.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/assets/css/output.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+  <nav class="bg-secondary">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="/" class="flex items-center">
+        <img src="/assets/img/logo-gm.png" class="h-20 mr-3" alt="GuessMe" />
+      </a>
+      <button data-collapse-toggle="navbar-hamburger" type="button"
+        class="inline-flex items-center justify-center p-2 w-10 h-10 ml-3 text-sm text-primary rounded-lg"
+        aria-controls="navbar-hamburger" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="https://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M1 1h15M1 7h15M1 13h15" />
+        </svg>
+      </button>
+      <div class="hidden w-full" id="navbar-hamburger">
+        <ul class="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 p-5">
+          <li>
+            <a href="/"
+              class="block py-2 pl-3 pr-4 text-secondary hover:bg-secondary hover:text-primary rounded">Home</a>
+          </li>
+          <li>
+            <a href="/games"
+              class="block py-2 pl-3 pr-4 text-secondary hover:bg-secondary hover:text-primary rounded">Games</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="bg-primary h-auto text-white">
+
+    <div class="container mx-auto px-5 ">
+      <h1 class="text-center py-10 text-3xl sm:text-5xl text-secondary font-bold">TEBAK ANGKA (Hard)</h1>
+      <div class="card my-5 bg-secondary h-auto px-5 py-5">
+        <div id="alert-border-1" class="flex items-center p-4 mb-4 border-t-4 border-tertiary text-secondary bg-primary"
+          role="alert">
+          <svg class="flex-shrink-0 w-4 h-4" aria-hidden="true" xmlns="https://www.w3.org/2000/svg" fill="currentColor"
+            viewBox="0 0 20 20">
+            <path
+              d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
+          </svg>
+          <div class="ml-3 text-sm font-medium">
+            Saya akan memikirkan sebuah angka antara <span class="text-tertiary">1 - 50</span>. Coba tebak angkanya!
+          </div>
+        </div>
+        <div class="text-center">
+          <p id="timer">Waktu Tersisa: <span id="timeLeft"></span></p>
+          <input type="number" class="input input-bordered w-52 text-secondary font-bold my-5 text-center py-5 text-lg"
+            id="guessInput" min="1" max="100" />
+          <p id="message"></p> <br>
+          <a href="" class="bg-primary text-secondary px-5 py-2 rounded-lg">Main Lagi</a>
+          <button id="tebak" class="bg-tertiary px-5 py-2 rounded-lg font-bold text-primary">TEBAK</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <a href="/games/tebak-angka/levels/medium"><i
+          class="fa-solid fa-square-caret-left text-secondary fa-fw text-5xl"></i></a>
+      <a href="/games/tebak-angka"><i class="fa-solid fa-square text-secondary fa-fw text-5xl"></i></a>
+      <a href="/games/tebak-angka/levels/extreme"><i
+          class="fa-solid fa-square-caret-right text-secondary fa-fw text-5xl"></i></a>
+    </div>
+
+    <i id="audio-control" class="fa fa-volume-up top"></i>
+    <audio id="backsound" autoplay loop>
+      <source src="/assets/audio/bs-home.mp3" type="audio/mpeg" />
+    </audio>
+  </section>
+
+  <footer class="bg-primary">
+    <div class="mx-auto max-w-screen-xl px-4 pb-8 pt-16 sm:px-6 lg:px-8 lg:pt-24">
+      <div class="mt-16 border-t border-secondary pt-8 sm:flex sm:items-center sm:justify-between lg:mt-24">
+        <ul class="flex flex-wrap justify-center gap-4 text-xs lg:justify-end text-secondary">
+          <li>
+            <a href="/Terms&Conditions" class="transition hover:opacity-75">
+              Terms & Conditions
+            </a>
+          </li>
+          <li>
+            <a href="/PrivacyPolicy" class="transition hover:opacity-75">
+              Privacy Policy
+            </a>
+          </li>
+        </ul>
+        <ul class="mt-8 flex justify-center gap-6 sm:mt-0 lg:justify-end">
+          <li>
+            <p class="text-xs text-secondary">Copyright © 2023 guessme. All Rights Reserved</p>
+          </li>
+        </ul>
+
+        <ul class="mt-8 flex justify-center gap-6 sm:mt-0 lg:justify-end text-secondary">
+          <li>
+            <a href="/" rel="noreferrer" target="_blank" class="transition hover:opacity-75">
+              <i class="fa-brands fa-instagram fa-xl"></i>
+            </a>
+          </li>
+          <li>
+            <a href="/" rel="noreferrer" target="_blank" class="transition hover:opacity-75">
+              <span class="sr-only">GitHub</span>
+              <i class="fa-brands fa-github fa-xl"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+    window.onload = function () {
+      let timerInterval;
+      Swal.fire({
+        title: 'Permainan akan dimulai',
+        html: 'dalam waktu <b></b> detik.',
+        timer: 3000,
+        allowOutsideClick: false,
+        timerProgressBar: true,
+        didOpen: () => {
+          Swal.showLoading();
+          const b = Swal.getHtmlContainer().querySelector('b');
+          timerInterval = setInterval(() => {
+            const secondsLeft = Math.ceil(Swal.getTimerLeft() / 1000);
+            b.textContent = secondsLeft;
+          }, 100);
+        },
+        willClose: () => {
+          clearInterval(timerInterval);
+          startGame(21);
+        }
+      }).then((result) => {
+
+
+      });
+    };
+    document.getElementById('tebak').addEventListener("click", function () { checkGuess(); });
+    window.addEventListener("keyup", (event) => {
+      if (event.code == "Enter") {
+        checkGuess();
+      }
+    });
+  </script>
+
+  <script src="/assets/js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js"></script>
+</body>
+
+</html>
